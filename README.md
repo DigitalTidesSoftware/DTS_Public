@@ -1,4 +1,4 @@
 DTS_Public
 ==========
 
-Digital Tides test software
+Digital Tides public test software
