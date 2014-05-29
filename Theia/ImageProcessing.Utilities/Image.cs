@@ -39,7 +39,8 @@ namespace ImageProcessing.Utilities
 
         public static System.Drawing.Image GetImageFromRaw(byte[] imageRaw)
         {
-
+            MemoryStream ms = new MemoryStream(imageRaw);
+            return System.Drawing.Image.FromStream(ms);
         }
     }
 }
