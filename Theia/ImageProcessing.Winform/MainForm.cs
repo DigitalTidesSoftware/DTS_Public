@@ -67,14 +67,9 @@ namespace ImageProcessing1
             ImageProcessing.Core.File.BitmapHolder bitmapHolder =
                 new ImageProcessing.Core.File.BitmapHolder(ImageProcessing.Utilities.Image.GetImageRaw(_imageFileLocation));
 
-            MemoryStream ms = new MemoryStream(bitmapHolder.RawBitmap);
-            //imageBytes = ms.ToArray();
-            //Image bitmap = Image.FromStream(ms);
-            //Bitmap img = (Bitmap)Image.FromStream(ms);
-
             try
             {
-                pictureBox1.Image = System.Drawing.Image.FromStream(ms);
+                pictureBox1.Image = ImageProcessing.Utilities.Image.GetImageFromRaw(bitmapHolder.RawBitmap);
             }
             catch (Exception ex)
             {
